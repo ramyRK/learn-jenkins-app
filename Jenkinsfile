@@ -6,7 +6,7 @@ pipeline {
             agent{
                 docker{
                     image 'node:18-alpine'
-                reuseNode true
+                    reuseNode true
                 }
                 
             }
@@ -14,7 +14,7 @@ pipeline {
                 sh'''
                 ls -la
                 node --version
-                npm --vesrion
+                npm --version
                 npm ci
                 npm run build
                 ls -ls
